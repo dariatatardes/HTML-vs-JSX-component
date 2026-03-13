@@ -1,9 +1,17 @@
+/* ==========================================================================
+   BASE / RESET
+   Purpose: predictable spacing + sizing across the page
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ==========================================================================
+   PAGE LAYOUT
+   Purpose: center the pricing grid on a warm neutral background
+   ========================================================================== */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +22,10 @@ body {
     padding: 20px;
 }
 
+/* ==========================================================================
+   GRID
+   Purpose: horizontal row of cards with consistent gaps
+   ========================================================================== */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +35,10 @@ body {
     align-items: flex-start;
 }
 
+/* ==========================================================================
+   CARD SHELL
+   Purpose: the overall plan container (background, radius, spacing)
+   ========================================================================== */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +50,16 @@ body {
     flex-shrink: 0;
 }
 
+/* Card internal layout: keep header/content stacked */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* ==========================================================================
+   TYPOGRAPHY
+   Purpose: title + price hierarchy inside each card
+   ========================================================================== */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -54,17 +75,23 @@ body {
     align-items: baseline;
 }
 
+/* Price amount: slightly larger, same muted tone */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Price period: helper text (e.g., /mo.) */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* ==========================================================================
+   CONTENT / LISTS
+   Purpose: spacing and styling for "Includes" + feature bullets
+   ========================================================================== */
 .card-content {
     margin-bottom: 32px;
 }
@@ -75,6 +102,7 @@ body {
     margin: 16px 0px;
 }
 
+/* Feature list: custom list (no default bullets) */
 .features-list {
     list-style: none;
     padding: 0;
@@ -88,6 +116,7 @@ body {
     color: #26251e;
 }
 
+/* Icon glyph: aligns checkmarks with text */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +124,10 @@ body {
     font-weight: 400;
 }
 
+/* ==========================================================================
+   BUTTONS (CTA)
+   Purpose: shared button base + visual variants (primary / outline)
+   ========================================================================== */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -109,6 +142,7 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* Interaction: hover/active share the same subtle darkening */
 .download-button:hover {
     background-color: #D8D6CE;
 }
@@ -117,6 +151,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Variant: primary (dark fill) */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +165,7 @@ body {
     background-color: #333;
 }
 
+/* Variant: outline (transparent with dark border) */
 .download-button.outline {
     background-color: transparent;
     border: 1px solid #111;
@@ -145,6 +181,10 @@ body {
     color: #fff;
 }
 
+/* ==========================================================================
+   PAGE LABEL
+   Purpose: fixed "version" badge at the top of the viewport
+   ========================================================================== */
 .page-label {
     position: fixed;
     top: 16px;
@@ -158,6 +198,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Emphasis: bold part of the badge */
 .page-label strong {
     color: #333;
 }
