@@ -181,6 +181,22 @@ body {
     color: #fff;
 }
 
+.download-button.tertiary {
+    background-color: transparent;
+    border: 1px solid #111;
+    color: #333;
+}
+
+.download-button.tertiary:hover {
+    background-color: #111;
+    color: #fff;
+}
+
+.download-button.tertiary:active {
+    background-color: #111;
+    color: #fff;
+}
+
 /* ==========================================================================
    PAGE LABEL
    Purpose: fixed "version" badge at the top of the viewport
