@@ -33,6 +33,48 @@ function Pricing() {
         buttonText: 'Get Pro',
         buttonVariant: 'primary',
     };
+    const enterprisePlan = {
+        title: 'Enterprise',
+        priceAmount: '$250',
+        pricePeriod: '/mo.',
+        includesText: 'Everything in Pro, plus:',
+        features: [
+            'Dedicated support',
+            'SSO & advanced security',
+            'Centralized billing & admin controls',
+            'Custom limits and onboarding',
+        ],
+        buttonText: 'Contact Sales',
+        buttonVariant: 'primary',
+    };
+    const orgPlan = {
+        title: 'Org',
+        priceAmount: '$20',
+        pricePeriod: '/mo.',
+        includesText: 'Everything in Hobby, plus:',
+        features: [
+            'Extended limits on Agent',
+            'Unlimited Tab completions',
+            'Background Agents',
+            'Maximum context windows',
+        ],
+        buttonText: 'Get Pro',
+        buttonVariant: 'primary',
+    };
+    const fullPlan = {
+        title: 'Full',
+        priceAmount: '$250',
+        pricePeriod: '/mo.',
+        includesText: 'Everything in Hobby, plus:',
+        features: [
+            'Extended limits on Agent',
+            'Unlimited Tab completions',
+            'Background Agents',
+            'Maximum context windows',
+        ],
+        buttonText: 'Get Full',
+        buttonVariant: 'primary',
+    };
 
     return (
         // <> is a React Fragment — groups elements without adding extra HTML divs
@@ -43,6 +85,9 @@ function Pricing() {
                 {/* This is the same as: title="Hobby" price="Free" includesText="Includes:" etc. */}
                 <PricingCard {...hobbyPlan} />
                 <PricingCard {...proPlan} />
+                <PricingCard {...enterprisePlan} />
+                <PricingCard {...orgPlan} />
+                <PricingCard {...fullPlan} />
             </div>
         </>
     );

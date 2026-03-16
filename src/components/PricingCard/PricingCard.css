@@ -41,6 +41,7 @@
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
+    margin-left: 2px;
 }
 
 .card-content {
