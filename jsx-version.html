@@ -58,7 +58,7 @@
                 price: 'Free',
                 includesText: 'Includes:',
                 features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
-                buttonText: 'Download',
+                buttonText: 'Start for free',
                 buttonVariant: 'outline',
             };
             const proPlan = {
@@ -85,6 +85,19 @@
                     'Maximum context windows',
                 ],
                 buttonText: 'Get Organization',
+                buttonVariant: 'tertiary',
+            };
+            const fullPlan = {
+                title: 'Full',
+                price: '$250/mo.',
+                includesText: 'Everything in Hobby, plus:',
+                features: [
+                    'Extended limits on Agent',
+                    'Unlimited Tab completions',
+                    'Background Agents',
+                    'Maximum context windows',
+                ],
+                buttonText: 'Get Full',
                 buttonVariant: 'primary',
             };
 
@@ -98,6 +111,7 @@
                         <PricingCard {...hobbyPlan} />
                         <PricingCard {...proPlan} />
                         <PricingCard {...orgPlan} />
+                        <PricingCard {...fullPlan} />
                     </div>
                 </>
             );
